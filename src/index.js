@@ -5,8 +5,8 @@ express().use((_, res) => {
   request(
     { uri: `internal:8888`, json: true }
   ).then(
-    ({ visits }) => res.end(template(visits)),
-    (error) => res.status(500).end(error),
+    ({ visits }) => res.send(template(visits)),
+    (error) => res.status(500).send(error),
   );
 }).listen(8888);
 
