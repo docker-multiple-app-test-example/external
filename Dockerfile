@@ -8,7 +8,7 @@ WORKDIR /projects/external
 COPY package.json package-lock.json* ./
 RUN npm install && npm cache clean --force
 
-COPY . /project/external
+COPY . /projects/external
 
 CMD ["node", "src/index.js"]
 
