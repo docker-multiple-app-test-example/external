@@ -1,7 +1,7 @@
 const express = require('express');
 const request = require('request-promise');
 
-express().use((_, res) => {
+express().get('/', (_, res) => {
   request(
     { uri: `http://internal:8888`, json: true }
   ).then(
