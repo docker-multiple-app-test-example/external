@@ -3,7 +3,7 @@ const request = require('request-promise');
 
 express().use((_, res) => {
   request(
-    { uri: `internal:8888`, json: true }
+    { uri: `http://internal:8888`, json: true }
   ).then(
     ({ visits }) => res.send(template(visits)),
     (error) => res.status(500).send(error),

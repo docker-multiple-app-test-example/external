@@ -1,6 +1,6 @@
 const request = require('request-promise');
 
-const external = `external:8888`;
+const external = `http://external:8888`;
 
 describe('should work', () => {
   test('should response with valid html', () =>
