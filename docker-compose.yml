@@ -1,9 +1,16 @@
 version: '3'
 
 services:
+  external:
+    build:
+      context: ../external
+    depends_on:
+      - internal
+    ports:
+      - "8888:8888"
   test_external:
     build:
-      context: .
+      context: ../external
       dockerfile: ./Dockerfile.test
     depends_on:
       - external
