@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  external:
+    build:
+      context: ../external
+    depends_on:
+      - internal
+    ports:
+      - "${APP_PORT}:8888"

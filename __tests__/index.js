@@ -1,10 +1,12 @@
 const request = require('request-promise');
 
-const external = `http://external:8888`;
+console.log(process.env)
+
+const app = `http://0.0.0.0:${process.env.APP_PORT}`;
 
 describe('should work', () => {
   test('should response with valid html', () =>
-    request(external).then(html => {
+    request(app).then(html => {
       expect(html).toMatch('Total visits');
     })
   );

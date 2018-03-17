@@ -5,7 +5,8 @@ echo "Starting docker-compose..."
 docker-compose \
   -p ci \
   -f ../compose/docker-compose.yml \
-  -f ./docker-compose.yml \
+  -f ./docker-compose.local.yml \
+  -f ./docker-compose.test.yml \
   up -d --build
 
 echo "Waiting for tests end..."
