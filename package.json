@@ -24,6 +24,7 @@
     "request-promise": "^4.2.2"
   },
   "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "jest": "^22.4.2"
   },
   "jest": {

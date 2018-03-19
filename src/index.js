@@ -14,7 +14,7 @@ function template(visits) {
   return `
     <html>
       <body>
-        <h1>Total visits: ${visits}</h1>
+        <h1>Total visits: <i>${visits}</i></h1>
       </body>
     </html>
   `;
