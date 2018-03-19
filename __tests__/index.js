@@ -1,8 +1,6 @@
 const request = require('request-promise');
 
-console.log(process.env)
-
-const app = `http://0.0.0.0:${process.env.APP_PORT}`;
+const app = `http://external:8888`;
 
 describe('should work', () => {
   test('should response with valid html', () =>
